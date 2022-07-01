@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.cn.java.dao.SelectMapper">
+    <select id="selectName" resultMap="one">
+        select name,pwd from user where name=#{name}
+    </select>
+    <resultMap id="one" type="com.cn.java.pojo.Account">
+        <id property="id" column="id"></id>
+        <result property="username" column="name"></result>
+        <result property="pwd" column="pwd"></result>
+    </resultMap>
+</mapper>
